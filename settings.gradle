@@ -1,0 +1,3 @@
+rootProject.name='RollingView'
+include ':app'
+include ':lib'
