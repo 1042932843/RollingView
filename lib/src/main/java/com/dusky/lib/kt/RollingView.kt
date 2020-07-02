@@ -44,6 +44,14 @@ class RollingView(context: Context, attrs: AttributeSet?) :
         mheight = h
     }
 
+    fun setBitmaps(size: Int,
+                   divider: Int,
+                   dividerColor: Int,
+                   bitmaps: Array<Bitmap?>){
+        val bitmapUtilKt= BitmapUtilKt()
+        bitmap= bitmapUtilKt.combineBitmap(size,divider,dividerColor,bitmaps)
+    }
+
      fun loadBitmap(context: Context, resourceId: Int): Bitmap {
         val options = BitmapFactory.Options()
         BitmapFactory.decodeResource(context.resources, resourceId, options)

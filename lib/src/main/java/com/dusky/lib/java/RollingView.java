@@ -13,6 +13,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.dusky.lib.R;
+import com.dusky.lib.kt.BitmapUtilKt;
 
 /**
  *Created by dusky on 2020/06/30.
@@ -53,6 +54,14 @@ public class RollingView extends View {
 
     public void setBitmap(Bitmap bitmap) {
         this.bitmap = bitmap;
+    }
+
+    public void setBitmaps(int size,
+                   int divider,
+                   int dividerColor,
+                   Bitmap[] bitmaps){
+        BitmapUtil bitmapUtil=new BitmapUtil();
+        bitmap= bitmapUtil.combineBitmap(size,divider,dividerColor,bitmaps);
     }
 
     public void setDegrees(int degrees) {
