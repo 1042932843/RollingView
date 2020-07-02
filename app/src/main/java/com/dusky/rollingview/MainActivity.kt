@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,7 +17,6 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun setView() {
-
         //本项目不提供图片合成功能
         rollingView_java.setBitmap(rollingView_java.loadBitmap(this, R.drawable.test))
         rollingView_java.setDegrees(30)
