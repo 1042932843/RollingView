@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
+import com.dusky.lib.util.Utils
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -17,11 +18,11 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun setView() {
-        //本项目不提供图片合成功能
-        rollingView_java.setBitmap(rollingView_java.loadBitmap(this, R.drawable.test))
+
+        rollingView_java.setBitmap(Utils.loadBitmap(this, R.drawable.test))
         rollingView_java.setDegrees(30)
 
-        rollingView.bitmap = rollingView.loadBitmap(this, R.drawable.test)
+        rollingView.bitmap = Utils.loadBitmap(this, R.drawable.test)
         rollingView.degrees = 30f
         num.text = "当前倾斜角度：" + 30
         seekBar.max = 52//在164dp宽，200dp高的情况下倾斜超过52度图片无法盖住控件，需要更好的实现请自行调整canvas原点位置和绘制的Rect大小。

@@ -97,14 +97,6 @@ public class RollingView extends View {
         height = h;
     }
 
-    public Bitmap loadBitmap(Context context, int resourceId) {
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        BitmapFactory.decodeResource(context.getResources(), resourceId, options);
-        options.inSampleSize = 1;//压缩采样率
-        options.inJustDecodeBounds = false;
-        return BitmapFactory.decodeResource(context.getResources(), resourceId, options);
-    }
-
 
     /**
      * 水平或垂直无限滚动

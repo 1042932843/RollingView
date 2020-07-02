@@ -52,14 +52,6 @@ class RollingView(context: Context, attrs: AttributeSet?) :
         bitmap= bitmapUtilKt.combineBitmap(size,divider,dividerColor,bitmaps)
     }
 
-     fun loadBitmap(context: Context, resourceId: Int): Bitmap {
-        val options = BitmapFactory.Options()
-        BitmapFactory.decodeResource(context.resources, resourceId, options)
-        options.inSampleSize = 1 //压缩采样率
-        options.inJustDecodeBounds = false
-        return BitmapFactory.decodeResource(context.resources, resourceId, options)
-    }
-
     /**
      * 水平无限滚动
      *
