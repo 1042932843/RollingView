@@ -4,7 +4,6 @@ package com.dusky.lib.java;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PaintFlagsDrawFilter;
@@ -13,7 +12,6 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.dusky.lib.R;
-import com.dusky.lib.kt.BitmapUtilKt;
 
 /**
  *Created by dusky on 2020/06/30.
